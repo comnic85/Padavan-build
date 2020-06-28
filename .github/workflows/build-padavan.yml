@@ -38,7 +38,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: MI-R3G
+        TNAME: MI-3
       run: |
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
@@ -68,9 +68,6 @@ jobs:
         
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TUNSAFE/d' .config
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=y" >> .config
-        
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_V2RAY/d' .config
-        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config
         
         #########################################################################################
         sudo ./clear_tree
