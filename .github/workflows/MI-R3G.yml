@@ -70,8 +70,8 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPC/d' .config #frpc
         echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> .config
         
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_TUNSAFE/d' .config #tunsafe
-        echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=y" >> .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_FRPS/d' .config #frps
+        echo "CONFIG_FIRMWARE_INCLUDE_FRPS=y" >> .config
         
         #########################################################################################
         sudo ./clear_tree
